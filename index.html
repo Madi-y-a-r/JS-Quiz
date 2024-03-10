@@ -7,10 +7,12 @@
     <title>Quiz</title>
     <style>
       body {
-          font-family: 'Roboto', sans-serif;
-          margin: 0;
-          padding: 0;
-          background-color: #ae7070;
+          font-family: 'Sansita Swashed', sans-serif;
+          margin: auto;
+          padding: 10%;
+          background-color: #22ACBE;
+          color: rgb(255, 255, 255);
+          
       }
       .quiz{
         margin: 0 auto;
@@ -80,6 +82,7 @@
         <div class="quiz-questions" id="questions"></div>
         <div class="quiz-results" id="results">
                 <div class="quiz-results-item">
+                    <h1>QUIZ</h1>
                     <div class="quiz-results-item__question">Вопрос 1</div>
                     <ul class="quiz-results-item__answers">
                         <li>Ответ 1</li>
@@ -87,47 +90,137 @@
                     </ul>
                 </div>
         </div>
-        <div class="quiz-indicator" id="indicator">1/10</div>
+        <div class="quiz-indicator" id="indicator"></div>
         <div class="quiz-controls">
-            <button class="btn-next" id="btn-next" disabled>Далее</button>
-            <button class="btn-restart" id="btn-restart">Заново</button>
+            <button class="btn-next" id="btn-next" disabled>Next</button>
+            <button class="btn-restart" id="btn-restart">Try again!</button>
         </div>
     </div>
 
     <script>
         const DATA = [
             {
-                question: 'Вопрос 1',
+                question: 'What is the capital of France?',
                 answers: [
                     {
                         id: '1',
-                        value: 'Ответ 1',
-                        correct: true,
-                    },
-                    {
-                        id: '2',
-                        value: 'Ответ 2',
+                        value: 'London',
                         correct: false,
                     },
                     {
+                        id: '2',
+                        value: 'Paris',
+                        correct: true,
+                    },
+                    {
                         id: '3',
-                        value: 'Ответ 3',
+                        value: 'Berlin',
+                        correct: false,
+                    },
+                    {
+                        id: '4',
+                        value: 'Rome',
                         correct: false,
                     }
                 ]
             },
             {
-                question: 'Вопрос 2',
+                question: 'What is the tallest mountain in the world?',
                 answers: [
                     {
-                        id: '4',
-                        value: 'Ответ 4',
+                        id: '5',
+                        value: 'Mount Everest',
+                        correct: true,
+                    },
+                    {
+                        id: '6',
+                        value: 'K2',
                         correct: false,
                     },
                     {
-                        id: '5',
-                        value: 'Ответ 5',
+                        id: '7',
+                        value: 'Kangchenjunga',
+                        correct: false,
+                    },
+                    {
+                        id: '8',
+                        value: 'Lhotse',
+                        correct: false,
+                    }
+                ]
+            },
+            {
+                question: 'How many colors are there in the rainbow?',
+                answers: [
+                    {
+                        id: '9',
+                        value: '7',
                         correct: true,
+                    },
+                    {
+                        id: '10',
+                        value: '5',
+                        correct: false,
+                    },
+                    {
+                        id: '11',
+                        value: '6',
+                        correct: false,
+                    },
+                    {
+                        id: '12',
+                        value: '8',
+                        correct: false,
+                    }
+                ]
+            },
+            {
+                question: 'What is the largest planet in our solar system?',
+                answers: [
+                    {
+                        id: '13',
+                        value: 'Earth',
+                        correct: false,
+                    },
+                    {
+                        id: '14',
+                        value: 'Jupiter',
+                        correct: true,
+                    },
+                    {
+                        id: '15',
+                        value: 'Mars',
+                        correct: false,
+                    },
+                    {
+                        id: '16',
+                        value: 'Venus',
+                        correct: false,
+                    }
+                ]
+            },
+            {
+                question: 'What is the name of the first book in the Harry Potter series?',
+                answers: [
+                    {
+                        id: '17',
+                        value: 'Harry Potter and the Goblet of Fire',
+                        correct: false,
+                    },
+                    {
+                        id: '18',
+                        value: 'Harry Potter and the Prisoner of Azkaban',
+                        correct: false,
+                    },
+                    {
+                        id: '19',
+                        value: "Harry Potter and the Sorcerer's Stone",
+                        correct: true,
+                    },
+                    {
+                        id: '20',
+                        value: 'Harry Potter and the Chamber of Secrets',
+                        correct: false,
                     }
                 ]
             }
